@@ -25,8 +25,9 @@ exports.bookSeat = async (req, res) => {
         return res.status(404).json({ msg: 'Arival stop not found' });
       }
       const seat = train.seats.find(seat => seat.seatNumber === seatNumber);
-  
+ 
       const findSeatTypePricing = train?.ticketPricing?.find(seatType => seat.class === seatType.class)
+    
       let decrementAmount = findSeatTypePricing.price
       let fare = calculateFare(train, startStop, endStop, decrementAmount)
   
@@ -40,11 +41,12 @@ exports.bookSeat = async (req, res) => {
       if (seat.isBooked) {
         return res.status(400).json({ msg: 'Seat already booked' });
       }
+
       const ticket = new Ticket({
         user: user._id,
         train: train._id,
         seatNumber,
-        class: seat.class,
+        class: seat?.class,
         startStop,
         fare,
         endStop,
@@ -68,7 +70,7 @@ exports.bookSeat = async (req, res) => {
       res.status(200).json({ msg: 'Seat booked successfully' });
     } catch (err) {
       console.error(err.message);
-      res.status(500).send({msg:err.message});
+      res.status(500).send({msg:'Seat has been not booked'});
     }
   };
   

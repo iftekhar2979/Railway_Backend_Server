@@ -3,11 +3,14 @@ const WalletTransaction=require("../Model/walletTransection")
 // Add funds to wallet
 exports.addFunds = async (req, res) => {
     const { amount } = req.body;
-    if (amount <= 0) {
+   if(typeof amount==="string"){
+    return res.status(400).json({ msg: 'Amount must be in Number format' });
+   }
+    if (amount <= 0 ) {
       return res.status(400).json({ msg: 'Amount must be greater than zero' });
     }
     try {
-      const user = await user.findById(req.decoded.user.id);
+      const user = await User.findById(req.decoded.user.id);
   
       user.wallet += amount;
       await user.save();
@@ -22,8 +25,8 @@ exports.addFunds = async (req, res) => {
       await transaction.save();
       res.json({ msg: 'Funds added to wallet', wallet: user.wallet });
     } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server error');
+     console.log(err.message)
+      res.status(500).send({msg:"Fund adding Error"});
     }
   };
   
@@ -31,10 +34,10 @@ exports.addFunds = async (req, res) => {
   exports.getWalletTransactions = async (req, res) => {
     try {
       const transactions = await WalletTransaction.find({ user: req.decoded.user.id }).sort({ date: -1 });
-      res.json(transactions);
+      res.status(200).json(transactions);
     } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server error');
+     
+      res.status(404).send({msg:"Transections Not found"});
     }
   };
   

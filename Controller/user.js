@@ -4,7 +4,6 @@ const User = require('../Model/user');
 const WalletTransaction = require('../Model/walletTransection');
 const { Error } = require('mongoose');
 
-const TOKEN='88b16e0e2b6436b915fef2856c119522968bf2fca9a676e7fff06184501f2dbbd0e04fe456cca63f6e41743905a5aec46bcd3032b130fb4b612a606bc59441a8'
 
 // Register a new user
 exports.register = async (req, res) => {
@@ -39,7 +38,7 @@ exports.register = async (req, res) => {
 
     jwt.sign(
       payload,
-      TOKEN,
+      process.env.SECRET_TOKEN,
       { expiresIn: 3600 },
       (err, token) => {
         if (err) throw err;
@@ -75,7 +74,7 @@ exports.login = async (req, res) => {
 
     jwt.sign(
       payload,
-      TOKEN,
+      process.env.SECRET_TOKEN,
       { expiresIn: 3600 },
       (err, token) => {
         if (err) throw err;
@@ -94,31 +93,43 @@ exports.getProfile = async (req, res) => {
     const user = await User.findById(req.decoded.user.id).select('-password');
     res.status(200).json(user);
   } catch (err) {
-    console.error(err.message);
     res.status(404).send({msg:"Profile not found"});
   }
 };
 
 // Update user profile
 exports.updateProfile = async (req, res) => {
+  const id=req.params.id
   const { name, email } = req.body;
 
-  if(!name || !email){
+  if(!name || !email ){
     return res.status(404).json({msg:"Profile not upgradable without fullfill information of user"})
   }
   try {
-    let user = await User.findByIdAndUpdate(req.user.id,req.body);
+    let user = await User.findByIdAndUpdate(id,req.body);
     if (!user) {
       return res.status(404).json({ msg: 'User not found' });
     }
-
-  
     res.status(200).json(user);
   } catch (err) {
   
-    res.status(500).send({msg:"Use not updated!!!"});
+    res.status(403).send({msg:"Use not updated!!!"});
   }
 };
 
+// Delete user profile
+exports.deleteProfile = async (req, res) => {
+  const id = req.params.id;
+  try {
+    let user = await User.findByIdAndDelete(id);
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+    res.status(200).json({msg:"user removed"});
+  } catch (err) {
+  
+    res.status(403).send({msg:"Use not removed!!!"});
+  }
+};
 
 

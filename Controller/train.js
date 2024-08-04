@@ -35,8 +35,7 @@ exports.getAllTrains = async (req, res) => {
     const trains = await Train.find();
     res.status(200).json(trains);
   } catch (err) {
-    // console.error(err.message);
-    res.status(500).send({ error: err.message });
+    res.status(500).send({ msg: 'Train not found'});
   }
 };
 
@@ -47,10 +46,10 @@ exports.getTrainById = async (req, res) => {
     if (!train) {
       return res.status(404).json({ msg: 'Train not found' });
     }
-    res.status(200).json(train);
+   return res.status(200).json(train);
   } catch (err) {
     // console.error(err.message);
-    res.status(500).send({msg:err.message});
+   return res.status(500).send({msg: 'Train not found'});
   }
 };
 

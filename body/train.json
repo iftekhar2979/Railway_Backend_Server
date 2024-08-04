@@ -1,0 +1,742 @@
+[
+    {
+      "name": "Express Train 106",
+      "type": "Express",
+      "capacity": 30,
+      "status": "active",
+      "departureStation": "Sunset Station",
+      "departureDate": "2023-10-01",
+      "departureTime": "08:00 AM",
+      "arrivalTime": "10:30 AM",
+      "stops": [
+        { "stationName": "Sunset Station", "arrivalTime": "09:00 AM", "departureTime": "09:15 AM", "sequence": 1 },
+        { "stationName": "Midwest Station", "arrivalTime": "09:45 AM", "departureTime": "10:00 AM", "sequence": 2 },
+        { "stationName": "Hilltop Station", "arrivalTime": "10:15 AM", "departureTime": "10:30 AM", "sequence": 3 }
+      ],
+      "seats":[
+        {
+          "seatNumber": "1A",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "1B",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "2A",
+          "isBooked": false,
+          "class": "business"
+        },
+        {
+          "seatNumber": "3A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "3B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "5A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "6A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "7A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "8A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "9A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "10A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10C",
+          "isBooked": false,
+          "class": "economy"
+        }
+      ]
+      
+    },
+    {
+      "name": "Express Train 107",
+      "type": "Express",
+      "capacity": 30,
+      "status": "active",
+      "departureStation": "Ocean View Station",
+      "departureDate": "2023-10-02",
+      "departureTime": "09:00 AM",
+      "arrivalTime": "11:00 AM",
+      "stops": [
+        { "stationName": "Ocean View Station", "arrivalTime": "10:00 AM", "departureTime": "10:15 AM", "sequence": 1 },
+        { "stationName": "Seaside Station", "arrivalTime": "10:30 AM", "departureTime": "10:45 AM", "sequence": 2 },
+        { "stationName": "Bayview Station", "arrivalTime": "10:50 AM", "departureTime": "11:00 AM", "sequence": 3 }
+      ],
+      "seats": [
+        {
+          "seatNumber": "1A",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "1B",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "2A",
+          "isBooked": false,
+          "class": "business"
+        },
+        {
+          "seatNumber": "3A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "3B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "5A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "6A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "7A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "8A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "9A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "10A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10C",
+          "isBooked": false,
+          "class": "economy"
+        }
+      ]
+      
+    },
+    {
+      "name": "Express Train 108",
+      "type": "Express",
+      "capacity": 30,
+      "status": "active",
+      "departureStation": "Mountain Station",
+      "departureDate": "2023-10-03",
+      "departureTime": "07:30 AM",
+      "arrivalTime": "09:30 AM",
+      "stops": [
+        { "stationName": "Mountain Station", "arrivalTime": "08:30 AM", "departureTime": "08:45 AM", "sequence": 1 },
+        { "stationName": "River Station", "arrivalTime": "09:00 AM", "departureTime": "09:15 AM", "sequence": 2 },
+        { "stationName": "Forest Station", "arrivalTime": "09:25 AM", "departureTime": "09:30 AM", "sequence": 3 }
+      ],
+      "seats": [
+        {
+          "seatNumber": "1A",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "1B",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "2A",
+          "isBooked": false,
+          "class": "business"
+        },
+        {
+          "seatNumber": "3A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "3B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "5A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "6A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "7A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "8A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "9A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "10A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10C",
+          "isBooked": false,
+          "class": "economy"
+        }
+      ]
+      
+    },
+    {
+      "name": "Express Train 109",
+      "type": "Express",
+      "capacity": 30,
+      "status": "active",
+      "departureStation": "City Center Station",
+      "departureDate": "2023-10-04",
+      "departureTime": "06:00 AM",
+      "arrivalTime": "08:00 AM",
+      "stops": [
+        { "stationName": "City Center Station", "arrivalTime": "07:00 AM", "departureTime": "07:15 AM", "sequence": 1 },
+        { "stationName": "Uptown Station", "arrivalTime": "07:30 AM", "departureTime": "07:45 AM", "sequence": 2 },
+        { "stationName": "Downtown Station", "arrivalTime": "07:50 AM", "departureTime": "08:00 AM", "sequence": 3 }
+      ],
+      "seats": [
+        {
+          "seatNumber": "1A",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "1B",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "2A",
+          "isBooked": false,
+          "class": "business"
+        },
+        {
+          "seatNumber": "3A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "3B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "5A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "6A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "7A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "8A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "9A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "10A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10C",
+          "isBooked": false,
+          "class": "economy"
+        }
+      ]
+      
+    },
+    {
+      "name": "Express Train 110",
+      "type": "Express",
+      "capacity": 30,
+      "status": "active",
+      "departureStation": "Pine Station",
+      "departureDate": "2023-10-05",
+      "departureTime": "10:15 AM",
+      "arrivalTime": "12:45 PM",
+      "stops": [
+        { "stationName": "Pine Station", "arrivalTime": "11:00 AM", "departureTime": "11:15 AM", "sequence": 1 },
+        { "stationName": "Maple Station", "arrivalTime": "11:30 AM", "departureTime": "11:45 AM", "sequence": 2 },
+        { "stationName": "Cedar Station", "arrivalTime": "12:30 PM", "departureTime": "12:45 PM", "sequence": 3 }
+      ],
+      "seats":[
+        {
+          "seatNumber": "1A",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "1B",
+          "isBooked": false,
+          "class": "economy"
+        },
+        {
+          "seatNumber": "2A",
+          "isBooked": false,
+          "class": "business"
+        },
+        {
+          "seatNumber": "3A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "3B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "4C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "5A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "5C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "6A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "6C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "7A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "7C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "8A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "8C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "9A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "9C",
+          "isBooked": false,
+          "class": "economy"
+        },
+             {
+          "seatNumber": "10A",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10B",
+          "isBooked": false,
+          "class": "economy"
+        },
+         {
+          "seatNumber": "10C",
+          "isBooked": false,
+          "class": "economy"
+        }
+      ]
+      
+    }
+  ]

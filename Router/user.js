@@ -17,7 +17,14 @@ router.post('/login',userController.login)
 // @desc     Get Authenticate User
 // @access   Private
 router.post('/profile',auth,userController.getProfile)
+// @route    POST api/user/profile
+// @desc     Update user by id
+// @access   Private
+router.patch('/:id',auth,userController.updateProfile)
 
-
+// @route    POST api/user/:id
+// @desc     Delete user by id
+// @access   Private
+router.delete('/:id',auth,userController.deleteProfile)
 
 module.exports = router;
