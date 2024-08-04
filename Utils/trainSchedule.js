@@ -125,7 +125,7 @@ const createTrains = async () => {
     for (const train of trainData) {
       const newTrain = new Train(train);
       await newTrain.save();
-      console.log('Train created:', newTrain.name);
+
     }
   } catch (err) {
     console.error('Failed to create trains:', err.message);
@@ -138,7 +138,7 @@ const createTrains = async () => {
 
 //Schedule a task to run every day
 cron.schedule('0 8 * * *', () => {
-    console.log('Running the train creation job every day at 8 AM');
+
     createTrains();
   }, {
     scheduled: true,
