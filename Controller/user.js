@@ -83,20 +83,19 @@ exports.login = async (req, res) => {
       }
     );
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
+
+    res.status(500).send({msg:"User not Logged in"});
   }
 };
 
 // Get user profile
 exports.getProfile = async (req, res) => {
-  // console.log(req)
   try {
     const user = await User.findById(req.decoded.user.id).select('-password');
     res.status(200).json(user);
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server error');
+    res.status(404).send({msg:"Profile not found"});
   }
 };
 
@@ -104,60 +103,22 @@ exports.getProfile = async (req, res) => {
 exports.updateProfile = async (req, res) => {
   const { name, email } = req.body;
 
+  if(!name || !email){
+    return res.status(404).json({msg:"Profile not upgradable without fullfill information of user"})
+  }
   try {
-    let user = await User.findById(req.user.id);
-
+    let user = await User.findByIdAndUpdate(req.user.id,req.body);
     if (!user) {
       return res.status(404).json({ msg: 'User not found' });
     }
 
-    if (name) user.name = name;
-    if (email) user.email = email;
-
-    await user.save();
-    res.json(user);
+  
+    res.status(200).json(user);
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
+  
+    res.status(500).send({msg:"Use not updated!!!"});
   }
 };
 
 
 
-// Add funds to wallet
-exports.addFunds = async (req, res) => {
-  const { amount } = req.body;
-  if (amount <= 0) {
-    return res.status(400).json({ msg: 'Amount must be greater than zero' });
-  }
-  try {
-    const user = await User.findById(req.decoded.user.id);
-
-    user.wallet += amount;
-    await user.save();
-
-    const transaction = new WalletTransaction({
-      user: req.decoded.user.id,
-      amount,
-      type: 'credit',
-      description: 'Funds added to wallet',
-    });
-
-    await transaction.save();
-    res.json({ msg: 'Funds added to wallet', wallet: user.wallet });
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
-  }
-};
-
-// Get wallet transactions
-exports.getWalletTransactions = async (req, res) => {
-  try {
-    const transactions = await WalletTransaction.find({ user: req.decoded.user.id }).sort({ date: -1 });
-    res.json(transactions);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
-  }
-};
