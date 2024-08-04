@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../Model/user');
 const WalletTransaction = require('../Model/walletTransection');
+const { Error } = require('mongoose');
 
 const TOKEN='88b16e0e2b6436b915fef2856c119522968bf2fca9a676e7fff06184501f2dbbd0e04fe456cca63f6e41743905a5aec46bcd3032b130fb4b612a606bc59441a8'
 
@@ -120,6 +121,8 @@ exports.updateProfile = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
+
+
 
 // Add funds to wallet
 exports.addFunds = async (req, res) => {
