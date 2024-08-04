@@ -43,7 +43,7 @@ exports.getStationById = async (req, res) => {
     res.status(200).json(station);
   } catch (err) {
     // console.error(err.message);
-    res.status(404).send({msg:err.message});
+    res.status(404).send({msg:"Station not found"});
   }
 };
 

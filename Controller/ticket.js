@@ -70,7 +70,7 @@ exports.bookSeat = async (req, res) => {
       res.status(200).json({ msg: 'Seat booked successfully' });
     } catch (err) {
       console.error(err.message);
-      res.status(500).send({msg:'Seat has been not booked'});
+      res.status(403).send({msg:'Seat has been not booked'});
     }
   };
   
@@ -78,16 +78,15 @@ exports.bookSeat = async (req, res) => {
   // Cancel a seat booking
 exports.cancelSeatBooking = async (req, res) => {
     const id = req.params.id;
-  
+
     try {
         const ticketInfo=await Ticket.findById(id)
-        const {seatNumber,fare,train:trainId,user:userInfo,startStop,endStop}=ticketInfo
+        const {seatNumber,fare,train:trainId,user:userInfo,startStop,endStop}=ticketInfo 
         const user = await User.findById(userInfo._id)
         const train = await Train.findById(trainId);
         if (!train) {
             return res.status(404).json({ msg: 'Train not found' });
         }
-        
         const seat = train.seats.find(seat => seat.seatNumber === seatNumber);
         if (!seat) {
             return res.status(404).json({ msg: 'Seat not found' });
@@ -108,7 +107,7 @@ exports.cancelSeatBooking = async (req, res) => {
           });
           
           const transaction = new WalletTransaction({
-            user: user._id,
+            user: userInfo,
             amount: fare,
             type: 'credit',
             description: 'Refund of ticket cancelation',
@@ -126,8 +125,7 @@ exports.cancelSeatBooking = async (req, res) => {
   
    
     } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server error');
+      res.status(500).send({ msg: 'Failed to cancel Ticket' });
     }
   };
   
@@ -137,7 +135,7 @@ exports.getTickets = async (req, res) => {
       const tickets = await Ticket.find({user:req.decoded.user.id});
       res.status(200).json(tickets);
     } catch (err) {
-      res.status(500).send({ error: err.message });
+      res.status(404).send({ msg: "No ticket found" });
     }
   };
   //Get Single Ticket
@@ -146,6 +144,6 @@ exports.getSingleTicket = async (req, res) => {
       const tickets = await Ticket.findById(req.params.id);
       res.status(200).json(tickets);
     } catch (err) {
-      res.status(500).send({ error: err.message });
+      res.status(404).send({ msg: "No ticket found" });
     }
   };

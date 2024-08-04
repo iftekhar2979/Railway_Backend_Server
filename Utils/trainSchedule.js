@@ -1,7 +1,7 @@
 const Train = require('../Model/train');
 const cron = require('node-cron');
 const createTrains = async () => {
-    console.log("runing")
+    
   const trainData = [
     {
       name: "Express Train 101",
@@ -136,11 +136,11 @@ const createTrains = async () => {
 
 
 
-//Schedule a task to run every 2 minutes
-cron.schedule('*/2 * * * *', () => {
-  console.log('Running the train creation job every 2 minutes');
-  createTrains();
-}, {
-  scheduled: true,
-  timezone: "Asia/Dhaka" // Adjust to your timezone
-});
+//Schedule a task to run every day
+cron.schedule('0 8 * * *', () => {
+    console.log('Running the train creation job every day at 8 AM');
+    createTrains();
+  }, {
+    scheduled: true,
+    timezone: "America/New_York" // Adjust to your valid timezone
+  });

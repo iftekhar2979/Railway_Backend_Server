@@ -25,7 +25,7 @@ exports.createTrain = async (req, res) => {
     await train.save();
     res.status(201).json(train);
   } catch (err) {
-    res.status(500).send({ error: "Failed to Add Train" });
+    res.status(403).send({ error: "Failed to Add Train" });
   }
 };
 
@@ -35,7 +35,7 @@ exports.getAllTrains = async (req, res) => {
     const trains = await Train.find();
     res.status(200).json(trains);
   } catch (err) {
-    res.status(500).send({ msg: 'Train not found'});
+    res.status(404).send({ msg: 'Train not found'});
   }
 };
 
@@ -49,7 +49,7 @@ exports.getTrainById = async (req, res) => {
    return res.status(200).json(train);
   } catch (err) {
     // console.error(err.message);
-   return res.status(500).send({msg: 'Train not found'});
+   return res.status(404).send({msg: 'Train not found'});
   }
 };
 
@@ -67,8 +67,8 @@ exports.updateTrain = async (req, res) => {
 
     res.status(200).json({msg:"Train information has been updated"});
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
+
+    res.status(500).send({msg:"Train Updating error"});
   }
 };
 
@@ -81,7 +81,7 @@ exports.deleteTrain = async (req, res) => {
     }
    return res.status(200).json({ msg: 'Train removed' });
   } catch (err) {
-    res.status(500).send({msg:"Train didn't remove"});
+    res.status(403).send({msg:"Train didn't remove"});
   }
 };
 
@@ -98,10 +98,10 @@ exports.addSeats = async (req, res) => {
     train.seats.push(...seats);
     await train.save();
 
-    res.json(train);
+    res.status(200).json(train);
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
+   
+    res.status(500).send({msg:"Seat adding fail"});
   }
 };
 
